@@ -23,11 +23,10 @@ pipeline {
             }
         }
     }
-   post
+   stage('Email Notification')
 {
-   always
-           {
-           emailext body: 'Summary', subject: '', to: 'mohitesheetal22@gmail.com'
-           }
-    }
+      mail bcc: '', body: 'hi welcome to email notification', cc: '', from: '', replyTo: '', subject: 'jenkins mail', to: 'mohitesheetal22@gmail.com'
+}
+     
+ }
 }
