@@ -23,10 +23,5 @@ pipeline {
             }
         }
     }
-   stage('Email Notification')
-{
-      mail bcc: '', body: 'hi welcome to email notification', cc: '', from: '', replyTo: '', subject: 'jenkins mail', to: 'mohitesheetal22@gmail.com'
-}
-     
- }
+   }
 
