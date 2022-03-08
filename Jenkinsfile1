@@ -7,20 +7,27 @@ pipeline {
                 echo 'Hello World'
             }
         }
-         stage('Build') {
+        stage('Build') {
             steps {
-                echo 'Building'
+                echo 'Building has been successfully'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying'
+                echo 'Deploying has been successfully'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing'
+                echo 'Testing has been successfully'
             }
         }
+    }
+   post
+{
+   always
+           {
+           emailext body: '', subject: '', to: 'mohitesheetal22@gmail.com'
+           }
     }
 }
