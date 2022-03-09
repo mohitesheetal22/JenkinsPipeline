@@ -22,6 +22,11 @@ pipeline {
                 echo 'Testing has been successfully'
             }
         }
+        stage('Email Notification'){
+        steps{
+        mail bcc: '', body: 'hi welcome to jenkins', cc: '', from: '', replyTo: '', subject: 'jenkins mail', to: 'mohitesheetal22@gmail.com'
+        }
+      }
     }
    }
 
